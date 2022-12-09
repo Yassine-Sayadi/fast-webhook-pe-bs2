@@ -1217,7 +1217,7 @@ const request = __webpack_require__(812);
   try {
     const res = await request.post(url).send(obj);
     console.log('Response body:', res.body);
-    if (![200, 201].includes(res.status)) {
+    if (![200, 201, 204].includes(res.status)) {
       core.setFailed(`Status code was not 200 or 201. Was: ${res.status}`);
     }
   } catch (error) {
